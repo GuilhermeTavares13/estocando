@@ -1,0 +1,21 @@
+.logoEstocando {
+    display: flex;
+    align-items: center;
+    font-family: "Figtree", serif;
+}
+
+.logoEstocando:hover {
+    cursor: pointer;
+}
+
+#imgLogoEstocando {
+    width: 30px;
+    height: 30px;
+    margin: 0;
+}
+
+h1 {
+    margin-right: 16px;
+    margin-left: 16px;
+}
+
