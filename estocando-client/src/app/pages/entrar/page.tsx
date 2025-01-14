@@ -9,14 +9,22 @@ export default function Page() {
     async function onSubmit(event: FormEvent<HTMLFormElement>) {
         event.preventDefault()
 
-        const formData = new FormData(event.currentTarget)
+        const formData = new FormData(event.currentTarget);
+        const payload = {
+          email: formData.get("email"),
+          password: formData.get("password"),
+        };
         const response = await fetch('http://localhost:5000/api/login', {
             method: 'POST',
-            body: formData,
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(payload),
         })
         // Handle response if necessary
         const data = await response.json()
         // ...
+        console.log(data);
     }
 
     return (
@@ -36,7 +44,7 @@ export default function Page() {
                         <button id="homeButtonEntrar" className="homeButton" type="submit">Confirmar</button>
                     </form>
                     <div className="innerContainer">
-                        <Link href="/cadastrar">Desejo cadastrar</Link>
+                        <Link href="/pages/cadastrar">Desejo cadastrar</Link>
                     </div>
                 </div>
             </main>
