@@ -13,6 +13,9 @@ export default function Home() {
                <Link id="homeButtonCadastrar" className="homeButton" href="/pages/cadastrar">Cadastrar</Link>
            </div>
        </main>
+        <footer>
+            Guilherme Tavares, 2025
+        </footer>
     </div>
   );
 }
