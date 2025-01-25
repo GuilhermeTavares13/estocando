@@ -14,7 +14,7 @@ export default function Home() {
            </div>
        </main>
         <footer>
-            Guilherme Tavares, 2025
+            Guilherme Tavares, @2025
         </footer>
     </div>
   );
